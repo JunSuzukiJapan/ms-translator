@@ -1,7 +1,7 @@
 {
   "name": "ms-translator",
   "main": "./lib/ms-translator",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A translator via Microsoft Translator API.",
   "keywords": [
   ],
@@ -9,7 +9,7 @@
     "atom-workspace": "ms-translator:run",
     "atom-workspace": "ms-translator:toggle"
   },
-  "repository": "https://github.com/atom/ms-translator",
+  "repository": "https://github.com/JunSuzukiJapan/ms-translator",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
