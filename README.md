@@ -11,4 +11,5 @@ If you get client id and client secret, setting them in Settings(cmd + ,).
 # Keyboard Shortcuts
 
 'cmd-ctrl-t': Translate selected text.
+
 'cmd-shift-ctrl-t': Toggle view.
