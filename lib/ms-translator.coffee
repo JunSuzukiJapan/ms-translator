@@ -18,7 +18,6 @@ module.exports = MsTranslator =
 
   activate: (state) ->
     @msTranslatorView = new MsTranslatorView(state.msTranslatorViewState)
-#    @modalPanel = atom.workspace.addModalPanel(item: @msTranslatorView.getElement(), visible: false)
     @modalPanel = atom.workspace.addBottomPanel(item: @msTranslatorView.getElement(), visible: false)
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
@@ -55,6 +54,10 @@ module.exports = MsTranslator =
     @modalPanel.show()
 
   run: ->
+    lang = @msTranslatorView.getLaunguages()
+    console.log('lang ', lang)
+    from = lang.from
+    to = lang.to
     self = this
     console.log('run')
     # 現在開いているeditorの本体
@@ -74,8 +77,8 @@ module.exports = MsTranslator =
 
       this.setText('...')
       self.translator.getAccessToken (token) ->
-        from = 'en'
-        to =  'ja'
+#        from = 'en'
+#        to =  'ja'
         self.translator.translate token, text, from, to, (translated) ->
           console.log(translated)
           self.setText(translated)
