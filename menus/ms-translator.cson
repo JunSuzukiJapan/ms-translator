@@ -1,0 +1,35 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'MS Translator'
+      'submenu': [
+        {
+          'label': 'Translate'
+          'command': 'ms-translator:run'
+        }
+        {
+          'label': 'Toggle Panel'
+          'command': 'ms-translator:toggle'
+        }
+      ]
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'MS Translator'
+      'submenu': [
+        {
+          'label': 'Translate'
+          'command': 'ms-translator:run'
+        }
+        {
+          'label': 'Toggle Panel'
+          'command': 'ms-translator:toggle'
+        }
+      ]
+    ]
+  }
+]
