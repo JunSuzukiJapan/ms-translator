@@ -1,5 +1,14 @@
 # ms-translator package
 
-A short description of your package.
+A translator via Microsoft Translator API.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+# Setup
+
+To translate with Microsoft Translator API, you needs sign up [Microsoft Translator](https://datamarket.azure.com/dataset/bing/microsofttranslator) and get client id and client secret.
+
+If you get client id and client secret, setting them in Settings(cmd + ,).
+
+# Keyboard Shortcuts
+
+'cmd-ctrl-t': Translate selected text.
+'cmd-shift-ctrl-t': Toggle view.

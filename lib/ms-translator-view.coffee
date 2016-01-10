@@ -71,8 +71,15 @@ class MsTranslatorView
     @selectTo = document.createElement('select')
     @selectTo.setAttribute('name', 'to')
 
-    defaultFrom = 'en'
-    defaultTo = 'ja'
+    defaultFrom = atom.config.get('ms-translator.from')
+    defaultTo = atom.config.get('ms-translator.to')
+    if !defaultFrom
+      defaultFrom = 'en'
+    if !defaultTo
+      defaultTo = 'ja'
+
+    console.log('from: ', defaultFrom, ' to: ', defaultTo)
+
     for key, value of MsTranslatorView.languages
       option = document.createElement('option')
       if key == defaultFrom
@@ -114,6 +121,9 @@ class MsTranslatorView
   # Tear down any state and detach
   destroy: ->
     @element.remove()
+    langs = this.getLaunguages()
+    atom.config.set('ms-translator.from', langs.from)
+    atom.config.set('ms-translator.to', langs.to)
 
   getElement: ->
     @element
