@@ -5,7 +5,10 @@
   "description": "A translator via Microsoft Translator API.",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "ms-translator:toggle"
+    "atom-workspace": [
+        "ms-translator:toggle",
+        "ms-translator:run"
+    ]
   },
   "repository": "https://github.com/JunSuzukiJapan/ms-translator",
   "license": "MIT",
