@@ -1,13 +1,13 @@
 {
   "name": "ms-translator",
   "main": "./lib/ms-translator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A translator via Microsoft Translator API.",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": [
-        "ms-translator:toggle",
-        "ms-translator:run"
+      "ms-translator:toggle",
+      "ms-translator:run"
     ]
   },
   "repository": "https://github.com/JunSuzukiJapan/ms-translator",
