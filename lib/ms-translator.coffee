@@ -7,6 +7,7 @@ module.exports = MsTranslator =
   modalPanel: null
   subscriptions: null
   translator: null
+  translatedText: null
 
   config:
     client_id:
@@ -26,6 +27,7 @@ module.exports = MsTranslator =
     # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace', 'ms-translator:run': => @run()
     @subscriptions.add atom.commands.add 'atom-workspace', 'ms-translator:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'ms-translator:paste': => @paste()
 
     @client_id = atom.config.get('ms-translator.client_id')
     @client_secret = atom.config.get('ms-translator.client_secret')
@@ -50,16 +52,27 @@ module.exports = MsTranslator =
       @modalPanel.show()
 
   setText: (text) ->
+    @translatedText = text
     @msTranslatorView.setText(text)
     @modalPanel.show()
 
+  paste: ->
+    return if @translatedText == null
+
+    editor = atom.workspace.getActiveTextEditor()
+    if editor
+      editor.insertText @translatedText
+
+
+
   run: ->
+    @translatedText = null
     lang = @msTranslatorView.getLaunguages()
-    console.log('lang ', lang)
+    #console.log('lang ', lang)
     from = lang.from
     to = lang.to
     self = this
-    console.log('run')
+    #console.log('run')
     # 現在開いているeditorの本体
     editor = atom.workspace.getActiveTextEditor()
     if editor

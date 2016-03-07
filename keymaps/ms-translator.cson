@@ -10,3 +10,4 @@
 'atom-workspace':
   'cmd-ctrl-t': 'ms-translator:run'
   'cmd-shift-ctrl-t': 'ms-translator:toggle'
+  'cmd-ctrl-v': 'ms-translator:paste'

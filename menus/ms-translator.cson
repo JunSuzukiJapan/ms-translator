@@ -12,6 +12,10 @@
           'label': 'Toggle Panel'
           'command': 'ms-translator:toggle'
         }
+        {
+          'label': 'Paste translated text'
+          'command': 'ms-translator:paste'
+        }
       ]
     }
   ]
@@ -28,6 +32,10 @@
         {
           'label': 'Toggle Panel'
           'command': 'ms-translator:toggle'
+        }
+        {
+          'label': 'Paste translated text'
+          'command': 'ms-translator:paste'
         }
       ]
     ]
