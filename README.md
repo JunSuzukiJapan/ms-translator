@@ -12,4 +12,6 @@ If you get client id and client secret, setting them in Settings(cmd + ,).
 
 'cmd-ctrl-t': Translate selected text.
 
+'cmd-ctrl-v': Paste translated text.
+
 'cmd-shift-ctrl-t': Toggle view.
